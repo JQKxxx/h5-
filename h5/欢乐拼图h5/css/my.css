@@ -1,0 +1,172 @@
+/* 清楚默认样式 */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+/* 个人中心 */
+
+.personal {
+    width: 100%;
+    min-height: 2.4rem;
+    background-color: #f05048;
+    display: flex;
+    justify-content: center;
+}
+
+.user-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    margin-top: 0.22rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    background: rgba(255, 255, 255, 1);
+    border: 0.04rem solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+}
+
+.nickname {
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    font-size: 0.3rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.16rem;
+    margin-bottom: 0.16rem;
+    display: -webkit-box;
+    width: 3rem;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+
+/* 我的钱包 */
+
+.content-box {
+    background: #fff;
+    margin-top: 0.3rem;
+    padding: 0 0.32rem;
+}
+
+.content-item {
+    height: 1rem;
+    border-top: 0.01rem solid #ededed;
+    display: flex;
+    align-items: center;
+    font-size: 0.3rem;
+    justify-content: space-between;
+}
+
+.content-left {
+    display: flex;
+    font-size: 0.36rem;
+}
+
+.content-right {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    align-items: center;
+}
+
+.icon {
+    width: 0.44rem;
+    height: auto;
+    margin-right: 0.24rem;
+}
+
+.icon image {
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    font-size: 0.34rem;
+}
+
+.title,
+.icon,
+.cash {
+    display: flex;
+    align-items: center;
+    color: #303030;
+}
+
+.cash {
+    color: #777;
+    font-size: 0.3rem;
+}
+
+
+/* 更多好玩 */
+
+.more-title {
+    display: flex;
+    justify-content: center;
+    font-size: 0.28rem;
+    color: #c4c4c4;
+    padding: 0.2rem;
+    position: relative;
+}
+
+.liner-left {
+    width: 1.2rem;
+    height: 0.01rem;
+    background-color: #c4c4c4;
+    position: absolute;
+    top: 0.4rem;
+    left: 1rem;
+}
+
+.liner-right {
+    width: 1.2rem;
+    height: 0.01rem;
+    background-color: #c4c4c4;
+    position: absolute;
+    top: 0.4rem;
+    right: 1rem;
+}
+
+.game-box {
+    width: 100%;
+    height: 2.3rem;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-around;
+}
+
+.game-item {
+    width: 1.8rem;
+    font-size: 0.28rem;
+    color: #333;
+    text-align: center;
+    padding: 0.25rem 0.15rem 0 0.15rem;
+}
+
+.logo-box {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.2rem;
+    background-color: #f05048;
+    margin-bottom: 0.1rem;
+    overflow: hidden;
+}
+
+.logo {
+    margin-top: 0.1rem;
+    width: 1.1rem;
+    height: 1.3rem;
+}
