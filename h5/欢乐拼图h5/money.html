@@ -1,0 +1,183 @@
+<!doctype html>
+<html rem="750">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="divport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>欢乐拼图</title>
+    <link rel="stylesheet" href="css/rem.css">
+    <link rel="stylesheet" href="css/money.css">
+
+    <body>
+
+        <div class="container">
+            <div class="content-container">
+                <div class="invalidHint"></div>
+                <div>
+                    <div class="body-top-title">
+                        <div class="cashback-detail-btn">提现明细</div>
+                    </div>
+                    <div class="cashback-box">
+                        <div class="cashback-title">
+                            <div class="cashback-desc">0.00</div>
+                            <div style="display:inline-block; line-height:0.56rem; font-size:0.28rem; vertical-align:top; margin-left:0.08rem; text-align:center;">
+                                元</div>
+                        </div>
+                        <div class="account-desc">
+                            <div class="account-title">账户余额</div>
+                        </div>
+                        <div style="padding:0.32rem 0.48rem;">
+                            <div style="font-size:0.28rem; color:#333;">提现金额</div>
+                            <div class="weui-flex" style="border-bottom:0.01rem solid #d9d9d9; margin-top:0.32rem;align-items: center;">
+                                <div class="money-icon">￥</div>
+                                <div class="weui-flex__item money-input-box">
+                                    <input class="money-input" maxlength="8" type="digit"></input>
+                                </div>
+                            </div>
+                            <div class="cashback-tip">提现到微信钱包，
+                                <span class="all-cashback-btn">全部提现</span>
+                            </div>
+                            <button class="cashback-button">提现</button>
+                            <div class="cashback-date-tip">1-5个工作日到账
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 更多好玩 -->
+
+                <div class="more">
+
+                    <div class="more-title">
+
+                        <div class="liner-left"></div>
+
+                        更多好玩小游戏推荐
+
+                        <div class="liner-right"></div>
+
+                    </div>
+
+                    <div class="game-box">
+
+                        <div class="game-item">
+                            <a href="">
+                                <div class="logo-box">
+                                    <img class="logo" src="images/logo-sing.png" alt="">
+                                </div>
+                                唱歌红包
+                            </a>
+                        </div>
+                        <div class="game-item">
+                            <a href="">
+                                <div class="logo-box">
+                                    <img class="logo" src="images/logo-question.png" alt="">
+                                </div>
+                                答题红包
+                            </a>
+                        </div>
+                        <div class="game-item">
+                            <a href="">
+                                <div class="logo-box">
+                                    <img class="logo" src="images/logo-eye.png" alt="">
+                                </div>
+                                拼眼力红包
+                            </a>
+                        </div>
+                        <div class="game-item">
+                            <a href="">
+                                <div class="logo-box">
+                                    <img class="logo" src="images/logo-speak.png" alt="">
+                                </div>
+                                说口令红包
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="width:100%; text-align:center;">
+                    <div class="foot-bar">
+                        <a class="go-index" href="">
+                            <div class="foot2">返回首页</div>
+                        </a>
+                        <div class="line"></div>
+                        <a class="foot2 page-foot qa-btn" href="">常见问题</a>
+                        <div class="line"></div>
+                        <a class="contact" href="">联系客服</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- tips -->
+
+        <div class="tips-box">
+
+            <div class="tips-content">
+
+                <div class="content-title">提示</div>
+
+                <div class="content-content"></div>
+
+                <div class="content-liner"></div>
+
+                <div class="content-close">确定</div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <script>
+        $('.tips-box').hide();
+        $('.invalidHint').hide();
+        if ($('.money-input').val() == '') {
+            $('.all-cashback-btn').click(function() {
+                $('.invalidHint').show();
+                $('.invalidHint').text('提现金额不能低于1元');
+            })
+            setTimeout(function() {
+                $('.invalidHint').hide();
+            }, 3000)
+            $('.cashback-button').click(function() {
+                $('.content-content').text('请输入有效提现金额');
+                $('.tips-box').show();
+            })
+        }
+        $('.money-input').bind("input propertychange", function() {
+
+            if ($('.money-input').val() < 1) {
+                $('.all-cashback-btn').click(function() {
+                    $('.invalidHint').show();
+                    $('.invalidHint').text('提现金额不能低于1元');
+                })
+                setTimeout(function() {
+                    $('.invalidHint').hide();
+                }, 3000)
+                $('.cashback-button').click(function() {
+                    $('.content-content').text('提现金额不得小于1元');
+                    $('.tips-box').show();
+                    $('.money-input').val() == '';
+                })
+            }
+            if ($('.money-input').val() > 1) {
+                $('.cashback-button').click(function() {
+                    $('.tips-box').hide();
+                })
+            }
+        });
+
+
+        $('.content-close').click(function() {
+            $('.tips-box').hide();
+        })
+    </script>
+
+</head>
