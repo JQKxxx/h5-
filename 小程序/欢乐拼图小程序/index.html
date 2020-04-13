@@ -1,0 +1,107 @@
+<!doctype html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>欢乐拼图</title>
+</head>
+<body>
+<view class="page-container" wx:if="{{!hideContainer}}">
+    <view class="home-top">
+        <view class="user-msg">
+            <view class="msg-l">
+                <view class="nickname">嗨！
+                    <open-data class="nickname-text" type="userNickName"></open-data>
+                </view>
+                <view class="desc">好友拼出完整图片才能获得红包</view>
+            </view>
+            <view class="msg-r">
+                <image catchtap="toggleShowGuide" class="how-to-btn" src="/images/pay/home_ic_how.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="pay-form" id="pay-form">
+        <form bindsubmit="bindPayTap" reportSubmit="true">
+            <form bindsubmit="bindTapSingsLib" reportSubmit="true">
+                <view class="pay-item sing-chose">
+                    <view class="chose-top">
+                        <view class="chose-top-l">选择图片</view>
+                        <view bindtap="toMore" class="chose-top-r">查看更多
+                            <image class="chose-arrow" src="/images/pay/home_ic_arrow2.png"></image>
+                        </view>
+                    </view>
+                    <view class="chose-bottom">
+                        <view bindtap="selectImage" class="image-box {{index==imageIndex?'select':''}}" data-index="{{index}}" wx:for="{{imageOptions}}">
+                            <image class="image-item" src="{{item.url}}" wx:if="{{item.imgNo!='AVATAR'}}"></image>
+                            <open-data class="image-item" type="userAvatarUrl" wx:else></open-data>
+                        </view>
+                    </view>
+                </view>
+            </form>
+            <view class="pay-item-form">
+                <view class="pay-item pay-item-list pay-item-money" style="margin:-7rpx 30rpx 0 30rpx;">
+                    <view class="pay-label" style="color:{{amountColor}};width:auto; flex-shrink:0">设置难度</view>
+                    <view class="options-list">
+                        <view bindtap="selectOption" class="option-item {{index==optionsIndex?'active':''}}" data-index="{{index}}" wx:for="{{optionsList}}">{{item}}</view>
+                    </view>
+                </view>
+                <view class="pay-item pay-item-list pay-item-num" style="margin-top: -7rpx">
+                    <view class="pay-invalid-hint pay-item-money-tip" style="{{invalidHint?'opacity: 1;':'opacity: 0;'}}">
+                        {{invalidHint}}</view>
+                    <view class="pay-label" style="color:{{amountColor}}">红包金额</view>
+                    <input bindinput="bindAmountInput" class="pay-input" maxlength="8" placeholder="填写红包总金额" placeholderClass="pay-input-placeholder" style="color:{{amountColor}}" type="digit" value="{{inputAmount}}"></input>
+                    <view class="pay-unit" style="color:{{amountColor}}">元</view>
+                </view>
+                <view class="pay-item pay-item-list pay-item-num" style="margin-top: -7rpx">
+                    <view class="pay-invalid-hint pay-item-num-tip" style="{{numInvalidInput?'opacity: 1;':'opacity: 0;'}}">{{numInvalidInput}}</view>
+                    <view class="pay-label" style="color:{{numColor}}">红包个数</view>
+                    <input bindinput="bindNumberInput" class="pay-input" maxlength="3" placeholder="填写个数" placeholderClass="pay-input-placeholder" style="color:{{numColor}}" type="number" value="{{inputNum}}"></input>
+                    <text class="pay-unit" style="color:{{numColor}}">个</text>
+                </view>
+                <view class="pay-button-container">
+                    <view class="service-fee">
+                        <view catchtap="openRuleTap">
+                            需支付￥{{serviceFee}}服务费
+                        </view>
+                    </view>
+                    <view bindtap="bindChoseTip" class="pay-button disabled-pay" wx:if="{{!checkAmount}}">
+                        生成拼图红包
+                    </view>
+                    <button class="pay-button" formType="submit" wx:elif="{{checkAmount&&!needAuth||!isAuth}}">
+                        {{amount>0&&payment>0&&canUseBalance?'还需支付'+payment+'元':'生成拼图红包'}}
+                    </button>
+                    <button bindgetuserinfo="bindgetuserinfo" class="pay-button" openType="getUserInfo" wx:elif="{{checkAmount&&needAuth&&isAuth}}">
+                        {{amount>0&&payment>0&&canUseBalance?'还需支付'+payment+'元':'生成拼图红包'}}
+                    </button>
+                    <view class="contact-box" wx:if="{{showThis}}">
+                        <button class="contact-btn" openType="contact" sessionFrom="{{sessionFrom}}">
+                            联系客服
+                            <block wx:if="{{isBeta}}"> | v{{version}}</block>
+                        </button>
+                    </view>
+                </view>
+            </view>
+        </form>
+    </view>
+    <view class="contact-box" wx:if="{{!showThis}}">
+        <button class="contact-btn" openType="contact" sessionFrom="main">
+            联系客服
+            <block wx:if="{{isBeta}}"> | v{{version}}</block>
+        </button>
+    </view>
+</view>
+<image bindtap="toggleShowMoreGame" class="more-game-btn" src="/images/more/tb-gdhw1.png" wx:if="{{moreFunEnable}}"></image>
+<modal bindconfirm="agreeTap" confirmText="我知道了" hidden="{{hideRule}}" noCancel="true" title="服务条款">
+    <text>本小程序将收取{{100*serviceRate}}%的服务费；
+        使用本小程序则表示你默认同意本服务条款。</text>
+</modal>
+<moreGamePopup bindclose="toggleShowMoreGame" moreFunList="{{moreFunList}}" wx:if="{{isShowMoreGame}}"></moreGamePopup>
+<view bindtap="toggleShowGuide" class="guide-container" wx:if="{{showGuide}}">
+    <guide catchtap="empty"></guide>
+    <view catchtap="toggleShowGuide" class="guide-btn">我知道了</view>
+</view>
+
+</body>
+</html>
