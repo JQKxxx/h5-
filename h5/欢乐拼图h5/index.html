@@ -1,107 +1,166 @@
 <!doctype html>
-<html >
+<html rem="750">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>欢乐拼图</title>
+    <link rel="stylesheet" href="./css/rem.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
 </head>
 <body>
-<view class="page-container" wx:if="{{!hideContainer}}">
-    <view class="home-top">
-        <view class="user-msg">
-            <view class="msg-l">
-                <view class="nickname">嗨！
-                    <open-data class="nickname-text" type="userNickName"></open-data>
-                </view>
-                <view class="desc">好友拼出完整图片才能获得红包</view>
-            </view>
-            <view class="msg-r">
-                <image catchtap="toggleShowGuide" class="how-to-btn" src="/images/pay/home_ic_how.png"></image>
-            </view>
-        </view>
-    </view>
-    <view class="pay-form" id="pay-form">
+<div class="page-container">
+    <div class="home-top">
+        <div class="user-msg">
+            <div class="msg-l">
+                <div class="nickname">
+                    嗨！
+                </div>
+                <div class="desc">好友拼出完整图片才能获得红包</div>
+            </div>
+            <div class="msg-r">
+                <img  class="how-to-btn" src="./images/pay/home_ic_how.png" />
+            </div>
+        </div>
+    </div>
+    <div class="pay-form" id="pay-form">
         <form bindsubmit="bindPayTap" reportSubmit="true">
             <form bindsubmit="bindTapSingsLib" reportSubmit="true">
-                <view class="pay-item sing-chose">
-                    <view class="chose-top">
-                        <view class="chose-top-l">选择图片</view>
-                        <view bindtap="toMore" class="chose-top-r">查看更多
-                            <image class="chose-arrow" src="/images/pay/home_ic_arrow2.png"></image>
-                        </view>
-                    </view>
-                    <view class="chose-bottom">
-                        <view bindtap="selectImage" class="image-box {{index==imageIndex?'select':''}}" data-index="{{index}}" wx:for="{{imageOptions}}">
-                            <image class="image-item" src="{{item.url}}" wx:if="{{item.imgNo!='AVATAR'}}"></image>
-                            <open-data class="image-item" type="userAvatarUrl" wx:else></open-data>
-                        </view>
-                    </view>
-                </view>
+                <div class="pay-item sing-chose">
+                    <div class="chose-top">
+                        <div class="chose-top-l">选择图片</div>
+                        <div bindtap="toMore" class="chose-top-r">查看更多
+                            <img class="chose-arrow" src="./images/pay/home_ic_arrow2.png" />
+                        </div>
+                    </div>
+                    <div class="chose-bottom">
+                        <div bindtap="selectImage" class="image-box select" >
+                            <img class="image-item" src="./images/pay/ex1.jpg"  />
+                        </div>
+                        <div bindtap="selectImage" class="image-box">
+                            <img class="image-item" src="./images/pay/ex1.jpg"  />
+                        </div>
+                        <div bindtap="selectImage" class="image-box" >
+                            <img class="image-item" src="./images/pay/ex1.jpg"  />
+                        </div>
+                        <div bindtap="selectImage" class="image-box">
+                            <img class="image-item" src="./images/pay/ex1.jpg"  />
+                        </div>
+                        <div bindtap="selectImage" class="image-box">
+                            <img class="image-item" src="./images/pay/ex1.jpg"  />
+                        </div>
+                    </div>
+                </div>
             </form>
-            <view class="pay-item-form">
-                <view class="pay-item pay-item-list pay-item-money" style="margin:-7rpx 30rpx 0 30rpx;">
-                    <view class="pay-label" style="color:{{amountColor}};width:auto; flex-shrink:0">设置难度</view>
-                    <view class="options-list">
-                        <view bindtap="selectOption" class="option-item {{index==optionsIndex?'active':''}}" data-index="{{index}}" wx:for="{{optionsList}}">{{item}}</view>
-                    </view>
-                </view>
-                <view class="pay-item pay-item-list pay-item-num" style="margin-top: -7rpx">
-                    <view class="pay-invalid-hint pay-item-money-tip" style="{{invalidHint?'opacity: 1;':'opacity: 0;'}}">
-                        {{invalidHint}}</view>
-                    <view class="pay-label" style="color:{{amountColor}}">红包金额</view>
-                    <input bindinput="bindAmountInput" class="pay-input" maxlength="8" placeholder="填写红包总金额" placeholderClass="pay-input-placeholder" style="color:{{amountColor}}" type="digit" value="{{inputAmount}}"></input>
-                    <view class="pay-unit" style="color:{{amountColor}}">元</view>
-                </view>
-                <view class="pay-item pay-item-list pay-item-num" style="margin-top: -7rpx">
-                    <view class="pay-invalid-hint pay-item-num-tip" style="{{numInvalidInput?'opacity: 1;':'opacity: 0;'}}">{{numInvalidInput}}</view>
-                    <view class="pay-label" style="color:{{numColor}}">红包个数</view>
-                    <input bindinput="bindNumberInput" class="pay-input" maxlength="3" placeholder="填写个数" placeholderClass="pay-input-placeholder" style="color:{{numColor}}" type="number" value="{{inputNum}}"></input>
-                    <text class="pay-unit" style="color:{{numColor}}">个</text>
-                </view>
-                <view class="pay-button-container">
-                    <view class="service-fee">
-                        <view catchtap="openRuleTap">
-                            需支付￥{{serviceFee}}服务费
-                        </view>
-                    </view>
-                    <view bindtap="bindChoseTip" class="pay-button disabled-pay" wx:if="{{!checkAmount}}">
+            <div class="pay-item-form">
+                <div class="pay-item pay-item-list pay-item-money" style="margin:-0.07rem 0.3rem 0 0.3rem;">
+                    <div class="pay-label" style="width:auto;flex-shrink:0">设置难度</div>
+                    <div class="options-list">
+                        <div bindtap="selectOption" class="option-item active">简单</div>
+                        <div bindtap="selectOption" class="option-item">正常</div>
+                        <div bindtap="selectOption" class="option-item">困难</div>
+                        <div bindtap="selectOption" class="option-item">变态</div>
+                    </div>
+                </div>
+                <div class="pay-item pay-item-list pay-item-num" style="margin-top: -0.07rem">
+                    <div class="pay-invalid-hint pay-item-money-tip" style="opacity: 0">
+                        </div>
+                    <div class="pay-label" style="">红包金额</div>
+                    <input class="pay-input" maxlength="8" placeholder="填写红包总金额" placeholderClass="pay-input-placeholder"  type="digit" value=""></input>
+                    <div class="pay-unit" style="">元</div>
+                </div>
+                <div class="pay-item pay-item-list pay-item-num" style="margin-top: -0.07rem">
+                    <div class="pay-invalid-hint pay-item-num-tip" style="opacity: 0;"></div>
+                    <div class="pay-label" >红包个数</div>
+                    <input  class="pay-input" maxlength="3" placeholder="填写个数" placeholderClass="pay-input-placeholder" type="number" value="{{inputNum}}"></input>
+                    <text class="pay-unit">个</text>
+                </div>
+                <div class="pay-button-container">
+                    <div class="service-fee">
+                        <div catchtap="openRuleTap">
+                            需支付￥0.02服务费
+                        </div>
+                    </div>
+                    <div class="pay-button disabled-pay" >
                         生成拼图红包
-                    </view>
-                    <button class="pay-button" formType="submit" wx:elif="{{checkAmount&&!needAuth||!isAuth}}">
-                        {{amount>0&&payment>0&&canUseBalance?'还需支付'+payment+'元':'生成拼图红包'}}
-                    </button>
-                    <button bindgetuserinfo="bindgetuserinfo" class="pay-button" openType="getUserInfo" wx:elif="{{checkAmount&&needAuth&&isAuth}}">
-                        {{amount>0&&payment>0&&canUseBalance?'还需支付'+payment+'元':'生成拼图红包'}}
-                    </button>
-                    <view class="contact-box" wx:if="{{showThis}}">
-                        <button class="contact-btn" openType="contact" sessionFrom="{{sessionFrom}}">
-                            联系客服
-                            <block wx:if="{{isBeta}}"> | v{{version}}</block>
-                        </button>
-                    </view>
-                </view>
-            </view>
+                    </div>
+
+
+                </div>
+            </div>
         </form>
-    </view>
-    <view class="contact-box" wx:if="{{!showThis}}">
+    </div>
+    <div class="contact-box" wx:if="{{!showThis}}">
         <button class="contact-btn" openType="contact" sessionFrom="main">
             联系客服
-            <block wx:if="{{isBeta}}"> | v{{version}}</block>
-        </button>
-    </view>
-</view>
-<image bindtap="toggleShowMoreGame" class="more-game-btn" src="/images/more/tb-gdhw1.png" wx:if="{{moreFunEnable}}"></image>
-<modal bindconfirm="agreeTap" confirmText="我知道了" hidden="{{hideRule}}" noCancel="true" title="服务条款">
-    <text>本小程序将收取{{100*serviceRate}}%的服务费；
-        使用本小程序则表示你默认同意本服务条款。</text>
-</modal>
-<moreGamePopup bindclose="toggleShowMoreGame" moreFunList="{{moreFunList}}" wx:if="{{isShowMoreGame}}"></moreGamePopup>
-<view bindtap="toggleShowGuide" class="guide-container" wx:if="{{showGuide}}">
-    <guide catchtap="empty"></guide>
-    <view catchtap="toggleShowGuide" class="guide-btn">我知道了</view>
-</view>
 
+        </button>
+    </div>
+</div>
+<img id="moreGame" class="more-game-btn" src="./images/more/tb-gdhw1.png" />
+<modal bindconfirm="agreeTap" confirmText="我知道了" hidden="{{hideRule}}" noCancel="true" title="服务条款">
+    <text>本程序将收取1%的服务费；
+        使用程序则表示你默认同意本服务条款。</text>
+</modal>
+<div  class="guide-container" style="display: none">
+
+        <img class="guide"  src="./images/guide/guide-v1.gif" />
+        <!--<div class="loading-box">-->
+            <!--<img class="loading-pic" src="./images/common/ic_loading.png" />-->
+            <!--<div class="loading-text">正在加载引导</div>-->
+        <!--</div>-->
+
+    <div class="guide-btn" id="toggleShowGuide">我知道了</div>
+</div>
+
+<div bindtap="close" class="more-game-area" style="display: none;">
+    <div catchtap="empty" class="more-game-container">
+        <img  class="close-btn" src="./images/more/pop_ic_close2.png"/>
+        <div class="more-game-title">更多好玩</div>
+        <div class="more-game-box">
+            <div bindtap="toAdGame" class="more-game-item" >
+                <div style="background: #E5554E" class="more-game-icon"><img  src="./images/pay/yanli.png" style="width: 100%;"/></div>
+                <div class="more-game-name">拼眼力红包</div>
+            </div>
+            <div bindtap="toAdGame" class="more-game-item" >
+                <div style="background: #E5554E" class="more-game-icon"><img  src="./images/pay/dati.png" style="width: 100%;"/></div>
+                <div class="more-game-name">答题红包</div>
+            </div>
+            <div bindtap="toAdGame" class="more-game-item" >
+                <div style="background: #E5554E" class="more-game-icon"><img  src="./images/pay/chang.png" style="width: 100%;"/></div>
+                <div class="more-game-name">唱歌红包</div>
+            </div>
+            <div bindtap="toAdGame" class="more-game-item" >
+                <div style="background: #E5554E" class="more-game-icon"><img  src="./images/pay/dati.png" style="width: 100%;"/></div>
+                <div class="more-game-name">拼颜值红包</div>
+            </div>
+            <div bindtap="toAdGame" class="more-game-item" >
+                <div style="background: #E5554E" class="more-game-icon"><img  src="./images/pay/shuo.png" style="width: 100%;"/></div>
+                <div class="more-game-name">说口令红包</div>
+            </div>
+            <div bindtap="toAdGame" class="more-game-item" >
+                <div style="background: #E5554E" class="more-game-icon"><img  src="./images/pay/yanli.png" style="width: 100%;"/></div>
+                <div class="more-game-name">追捕红包</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="position: fixed;background:#fff;bottom: 0;left: 0;padding:0.05rem 0;box-sizing:border-box;right: 0;display: flex;height: 1.5rem;justify-content: space-around">
+    <div style="width: 1.2rem;display: flex;justify-content: space-around;flex-direction: column">
+        <img src="./images/home_redpack_active.png" alt="" style="display: block;width:0.8rem;margin: 0 auto;">
+        <img src="./images/home_redpack_default.png" alt="" style="display: block;width:0.8rem;margin: 0 auto;display: none">
+        <div style="text-align: center" class="tabbar_active">发红包</div>
+    </div>
+    <div style="width: 1.2rem;display: flex;justify-content: space-around;flex-direction: column">
+        <img src="./images/ic_my_normal.png" alt="" style="display: block;width:0.8rem;margin: 0 auto;">
+        <img src="./images/ic_my_active.png" alt="" style="display: block;width:0.8rem;margin: 0 auto;display: none">
+        <div style="text-align: center">我的</div>
+    </div>
+</div>
 </body>
+
+<script src="js/index.js"></script>
 </html>
