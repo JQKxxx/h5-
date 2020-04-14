@@ -1,0 +1,238 @@
+body{
+    margin: 0;
+    background-color: #f1f1f1;
+    height: 100%;
+    font-family: Microsoft YaHei;
+}
+@import "0.css";
+.container{
+    height: 100vh;
+}
+.weui-flex{
+    display: flex;
+}
+.weui-flex__item{
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+.title{
+    font-size: 0.3rem;
+    color: #333;
+}
+.weui-cells {
+    margin-top: 0;
+}
+
+.weui-cells:before {
+    height: 0;
+}
+
+.weui-cell__bd {
+    font-size: 0.28rem;
+}
+
+.weui-cell:before {
+    left: 0;
+}
+
+.cell {
+    background-color: white;
+    padding: 0.1rem 0.15rem;
+    border-radius: 0.04rem;
+}
+
+.title {
+    font-size: 0.3rem;
+    color: #333;
+}
+
+.content {
+    border-top: 0.01rem solid #d9d9d9;
+    background-color: white;
+    padding: 0.1rem 0.3rem;
+    font-size: 0.28rem;
+    color: #333;
+}
+
+.detail {
+    width: 0.44rem;
+    height: 0.44rem;
+    display: inline-block;
+}
+
+.box {
+    box-shadow: 0.05rem 0.05rem 0.1rem #999;
+}
+
+.report-icon {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 0.24rem;
+    height: 0.24rem;
+}
+
+.report-text {
+    display: inline-block;
+    vertical-align: bottom;
+    height: 0.24rem;
+    line-height: 0.24rem;
+    font-size: 0.24rem;
+    color: #999;
+    margin-left: 0.04rem;
+}
+
+.report-link {
+    margin-top: 0.16rem;
+    padding: 0.12rem 0 0.2rem 0;
+    text-align: center;
+    color: #586c94;
+    font-size: 0.28rem;
+}
+
+.foot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.3rem;
+    padding-top: 0.7rem;
+}
+
+.btn_default {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    text-align: left;
+    line-height: normal;
+    overflow: visible;
+}
+
+.btn_default::after {
+    border: none;
+}
+button{
+    border: none;
+    width: 100%;
+    position: relative;
+    display: block;
+    padding-left: 14px;
+    padding-right: 14px;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2.55555556;
+    border-radius: 5px;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+;
+}
+button[type=primary]{
+    color: #fff;
+    background-color: #1aad19;
+}
+
+
+/*dd*/
+.page-foot {
+    padding: 0.8rem 0 0.24rem 0;
+    text-align: center;
+    color: #1aad19;
+    font-size: 0;
+}
+
+.foot2 {
+    color: #586c94;
+    font-size: 0.26rem;
+    display: inline-block;
+}
+
+.foot1 {
+    margin: 0 auto;
+    color: #888;
+    font-size: 0.24rem;
+}
+
+.content-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-body {
+    flex-grow: 1;
+}
+
+.torecord {
+    color: #586c94;
+    font-size: 0.28rem;
+    display: inline-block;
+}
+
+.descript {
+    margin: 0 auto;
+    color: #888;
+    font-size:0.28rem;
+}
+
+.guide {
+    background: #F65757;
+    font-size: 0.28rem;
+    line-height: 0.28rem;
+    padding: 0.16rem;
+    border-radius: 0.08rem;
+    z-index: 999;
+    color: #fff;
+}
+
+.red-guide {
+    background: RGBA(255,240,109,1);
+    font-size: 0.28rem;
+    line-height: 0.36rem;
+    padding: 0.11rem;
+    border-radius: 0.08rem;
+    z-index: 999;
+    color: rgba(214,66,56,1);
+}
+
+.guide:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -0.32rem;
+    right: 1rem;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-color: transparent transparent RGBA(255,240,109,1) transparent;
+    z-index: 1001;
+}
+
+.guide-pop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s ease;
+}
+
+.guidehide {
+    width: 2.6rem;
+    height: 0.72rem;
+    border-radius: 0.36rem;
+    border: 0.02rem solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.32rem;
+    color: #fff;
+    margin-top: 0.7rem;
+}

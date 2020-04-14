@@ -26,14 +26,16 @@
         </div>
     </div>
     <div class="pay-form" id="pay-form">
-        <form bindsubmit="bindPayTap" reportSubmit="true">
-            <form bindsubmit="bindTapSingsLib" reportSubmit="true">
+        <form >
+            <form >
                 <div class="pay-item sing-chose">
                     <div class="chose-top">
                         <div class="chose-top-l">选择图片</div>
-                        <div bindtap="toMore" class="chose-top-r">查看更多
+                        <a href="./index_imgs.html">
+                        <div class="chose-top-r">查看更多
                             <img class="chose-arrow" src="./images/pay/home_ic_arrow2.png" />
                         </div>
+                        </a>
                     </div>
                     <div class="chose-bottom">
                         <div bindtap="selectImage" class="image-box select" >
@@ -58,10 +60,10 @@
                 <div class="pay-item pay-item-list pay-item-money" style="margin:-0.07rem 0.3rem 0 0.3rem;">
                     <div class="pay-label" style="width:auto;flex-shrink:0">设置难度</div>
                     <div class="options-list">
-                        <div bindtap="selectOption" class="option-item active">简单</div>
-                        <div bindtap="selectOption" class="option-item">正常</div>
-                        <div bindtap="selectOption" class="option-item">困难</div>
-                        <div bindtap="selectOption" class="option-item">变态</div>
+                        <div class="option-item active">简单</div>
+                        <div class="option-item">正常</div>
+                        <div class="option-item">困难</div>
+                        <div class="option-item">变态</div>
                     </div>
                 </div>
                 <div class="pay-item pay-item-list pay-item-num" style="margin-top: -0.07rem">
@@ -92,18 +94,18 @@
             </div>
         </form>
     </div>
-    <div class="contact-box" wx:if="{{!showThis}}">
-        <button class="contact-btn" openType="contact" sessionFrom="main">
+    <div class="contact-box">
+        <button class="contact-btn" >
             联系客服
 
         </button>
     </div>
 </div>
 <img id="moreGame" class="more-game-btn" src="./images/more/tb-gdhw1.png" />
-<modal bindconfirm="agreeTap" confirmText="我知道了" hidden="{{hideRule}}" noCancel="true" title="服务条款">
-    <text>本程序将收取1%的服务费；
-        使用程序则表示你默认同意本服务条款。</text>
-</modal>
+<!--<modal bindconfirm="agreeTap" confirmText="我知道了" hidden="{{hideRule}}" noCancel="true" title="服务条款">-->
+    <!--<text>本程序将收取1%的服务费；-->
+        <!--使用程序则表示你默认同意本服务条款。</text>-->
+<!--</modal>-->
 <div  class="guide-container" style="display: none">
 
         <img class="guide"  src="./images/guide/guide-v1.gif" />
@@ -115,49 +117,63 @@
     <div class="guide-btn" id="toggleShowGuide">我知道了</div>
 </div>
 
-<div bindtap="close" class="more-game-area" style="display: none;">
-    <div catchtap="empty" class="more-game-container">
+<div  class="more-game-area" style="display: none;">
+    <div  class="more-game-container">
         <img  class="close-btn" src="./images/more/pop_ic_close2.png"/>
         <div class="more-game-title">更多好玩</div>
         <div class="more-game-box">
-            <div bindtap="toAdGame" class="more-game-item" >
+            <div class="more-game-item" >
+                <a href="">
                 <div style="background: #E5554E" class="more-game-icon"><img  src="./images/pay/yanli.png" style="width: 100%;"/></div>
                 <div class="more-game-name">拼眼力红包</div>
+                </a>
             </div>
-            <div bindtap="toAdGame" class="more-game-item" >
+            <div class="more-game-item" >
+                <a href="">
                 <div style="background: #E5554E" class="more-game-icon"><img  src="./images/pay/dati.png" style="width: 100%;"/></div>
                 <div class="more-game-name">答题红包</div>
+                </a>
             </div>
-            <div bindtap="toAdGame" class="more-game-item" >
+            <div class="more-game-item" >
+                <a href="">
                 <div style="background: #E5554E" class="more-game-icon"><img  src="./images/pay/chang.png" style="width: 100%;"/></div>
                 <div class="more-game-name">唱歌红包</div>
+                </a>
             </div>
-            <div bindtap="toAdGame" class="more-game-item" >
+            <div class="more-game-item" >
+                <a href="">
                 <div style="background: #E5554E" class="more-game-icon"><img  src="./images/pay/dati.png" style="width: 100%;"/></div>
                 <div class="more-game-name">拼颜值红包</div>
+                </a>
             </div>
-            <div bindtap="toAdGame" class="more-game-item" >
+            <div class="more-game-item" >
+                <a href="">
                 <div style="background: #E5554E" class="more-game-icon"><img  src="./images/pay/shuo.png" style="width: 100%;"/></div>
                 <div class="more-game-name">说口令红包</div>
+                </a>
             </div>
-            <div bindtap="toAdGame" class="more-game-item" >
+            <div class="more-game-item" >
+                <a href="">
                 <div style="background: #E5554E" class="more-game-icon"><img  src="./images/pay/yanli.png" style="width: 100%;"/></div>
                 <div class="more-game-name">追捕红包</div>
+                </a>
             </div>
         </div>
     </div>
 </div>
 
-<div style="position: fixed;background:#fff;bottom: 0;left: 0;padding:0.05rem 0;box-sizing:border-box;right: 0;display: flex;height: 1.5rem;justify-content: space-around">
+<div style="position: fixed;background:#fff;bottom: 0;left: 0;padding:0.05rem 0;box-sizing:border-box;right: 0;display: flex;height: 1.1rem;justify-content: space-around">
     <div style="width: 1.2rem;display: flex;justify-content: space-around;flex-direction: column">
-        <img src="./images/home_redpack_active.png" alt="" style="display: block;width:0.8rem;margin: 0 auto;">
-        <img src="./images/home_redpack_default.png" alt="" style="display: block;width:0.8rem;margin: 0 auto;display: none">
-        <div style="text-align: center" class="tabbar_active">发红包</div>
+        <img src="./images/home_redpack_active.png" alt="" style="display: block;width:0.6rem;margin: 0 auto;">
+        <img src="./images/home_redpack_default.png" alt="" style="display: block;width:0.6rem;margin: 0 auto;display: none">
+        <div style="text-align: center;font-size: 0.24rem" class="tabbar_active">发红包</div>
     </div>
     <div style="width: 1.2rem;display: flex;justify-content: space-around;flex-direction: column">
-        <img src="./images/ic_my_normal.png" alt="" style="display: block;width:0.8rem;margin: 0 auto;">
-        <img src="./images/ic_my_active.png" alt="" style="display: block;width:0.8rem;margin: 0 auto;display: none">
-        <div style="text-align: center">我的</div>
+        <a href="./my.html">
+        <img src="./images/ic_my_normal.png" alt="" style="display: block;width:0.6rem;margin: 0 auto;">
+        <img src="./images/ic_my_active.png" alt="" style="display: block;width:0.6rem;margin: 0 auto;display: none">
+        <div style="text-align: center;font-size: 0.24rem">我的</div>
+        </a>
     </div>
 </div>
 </body>

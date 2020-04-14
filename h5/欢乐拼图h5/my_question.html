@@ -1,0 +1,139 @@
+<!doctype html>
+<html rem="750">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的-常见问题</title>
+    <link rel="stylesheet" href="./css/rem.css">
+    <link rel="stylesheet" href="./css/my_question.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div style="height:100%;overflow-y: scroll">
+        <div class="content-container">
+            <div class="content-body">
+                <div style="padding:0 0.32rem;">
+                    <div style="padding-top:0.16rem;">
+                        <div class="oneDate" style="margin-top: 0.2rem; background-color: white;">
+                            <div  class="cell">
+                                <div class="weui-flex">
+                                    <div class="weui-flex__item title">「欢乐拼图」怎么玩？</div>
+                                    <img class="detail" src="./images/help/detail.png" />
+                                </div>
+                            </div>
+                            <div class="content" hidden>
+                                <text>你可以设置一个带奖励的拼图红包，好友成功完成拼图才能领到奖励</text>
+                            </div>
+                        </div>
+                        <div class="oneDate" style="margin-top: 0.2rem; background-color: white;">
+                            <div  class="cell" data-idx="{{ques.id}}">
+                                <div class="weui-flex">
+                                    <div class="weui-flex__item title">为什么不能使用自定义图片？</div>
+                                    <img class="detail" src="./images/help/detail.png" />
+                                </div>
+                            </div>
+                            <div class="content" hidden>
+                                <text>因微信最新规定明确要求，用户不能自定义上传图片；你可点击查看更多进入素材库中挑选并生成拼图红包。</text>
+                            </div>
+                        </div>
+                        <div class="oneDate" style="margin-top: 0.2rem; background-color: white;">
+                            <div  class="cell" data-idx="{{ques.id}}">
+                                <div class="weui-flex">
+                                    <div class="weui-flex__item title">我支付了但没有发出去？</div>
+                                    <img class="detail" src="./images/help/detail.png" />
+                                </div>
+                            </div>
+                            <div class="content" hidden>
+                                <text>请在主页的【我的记录】中找到相应的记录，点击进入详情后点击【邀好友来玩】可把红包转发给好友或群</text>
+                            </div>
+                        </div>
+                        <div class="oneDate" style="margin-top: 0.2rem; background-color: white;">
+                            <div  class="cell" data-idx="{{ques.id}}">
+                                <div class="weui-flex">
+                                    <div class="weui-flex__item title">好友可以转发我的拼图红包吗？</div>
+                                    <img class="detail" src="./images/help/detail.png" />
+                                </div>
+                            </div>
+                            <div class="content" hidden>
+                                <text>可以的，您分享给好友或者转发到微信群的拼图红包，其他好友均可再次转发</text>
+                            </div>
+                        </div>
+                        <div class="oneDate" style="margin-top: 0.2rem; background-color: white;">
+                            <div  class="cell" data-idx="{{ques.id}}">
+                                <div class="weui-flex">
+                                    <div class="weui-flex__item title">发拼图红包会收取服务费吗？</div>
+                                    <img class="detail" src="./images/help/detail.png" />
+                                </div>
+                            </div>
+                            <div class="content" hidden>
+                                <text>发拼图红包会收取2%的服务费</text>
+                            </div>
+                        </div>
+                        <div class="oneDate" style="margin-top: 0.2rem; background-color: white;">
+                            <div  class="cell" data-idx="{{ques.id}}">
+                                <div class="weui-flex">
+                                    <div class="weui-flex__item title">未领取的金额会怎样处理？</div>
+                                    <img class="detail" src="./images/help/detail.png" />
+                                </div>
+                            </div>
+                            <div class="content" hidden>
+                                <text>未领取的金额将于24小时后退至小程序余额；同时，未领取金额的服务费将全部退回</text>
+                            </div>
+                        </div>
+                        <div class="oneDate" style="margin-top: 0.2rem; background-color: white;">
+                            <div  class="cell" data-idx="{{ques.id}}">
+                                <div class="weui-flex">
+                                    <div class="weui-flex__item title">如何提现到微信钱包？</div>
+                                    <img class="detail" src="./images/help/detail.png" />
+                                </div>
+                            </div>
+                            <div class="content" hidden>
+                                <text>在【我的-钱包】或详情页的【已存入账户余额】均可跳转至余额提现页面进行提现，提现金额每次至少0.3元，每天至多提现5次</text>
+                            </div>
+                        </div>
+                        <div class="oneDate" style="margin-top: 0.2rem; background-color: white;">
+                            <div  class="cell" data-idx="{{ques.id}}">
+                                <div class="weui-flex">
+                                    <div class="weui-flex__item title">提现会收取服务费吗？多久到帐？</div>
+                                    <img class="detail" src="./images/help/detail.png" />
+                                </div>
+                            </div>
+                            <div class="content" hidden>
+                                <text>提现不收取服务费；申请提现后会在1-5个工作日内转账到你的微信钱包。【温馨提示】微信号非实名认证需完成实名认证后才可提现。</text>
+                            </div>
+                        </div>
+                        <div class="oneDate" style="margin-top: 0.2rem; background-color: white;">
+                            <div  class="cell">
+                                <div class="weui-flex">
+                                    <div class="weui-flex__item title">如何联系客服？（客服在线时间：9:00-21:30）</div>
+                                    <img class="detail" src="./images/help/detail.png" />
+                                </div>
+                            </div>
+                            <div class="content" hidden>
+                                <text>您可以点击本页面下方的绿色按钮来联系我们的在线客服；  您也可以拨打我们的客服电话：020-29052945</text>
+                            </div>
+                        </div>
+                    </div>
+                    <button style="margin-top:0.48rem; font-size:0.32rem;" type="primary">
+                        <img src="./images/help/service.png" style="width:0.36rem; height:0.36rem; display:inline-block; vertical-align:middle; margin-right:0.1rem;"/>
+                        <text style="display:inline-block; vertical-align:middle;">联系在线客服</text>
+                    </button>
+
+                </div>
+            </div>
+            <div class="foot-container">
+                <div class="foot2" style="color:#888;">v2.6.7</div>
+                <div style="width:0.01rem; height:0.28rem; border-left:0.01rem solid #d9d9d9; display:inline-block; margin:0 0.15rem; vertical-align:middle;"></div>
+
+                <div bindtap="bindTapReport" class="foot2"><a href="" style="color: #586c94;">投诉</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js/my_question.js"></script>
+</html>

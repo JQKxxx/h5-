@@ -26,7 +26,11 @@ $(function() {
             $('.pay-button-container .pay-button').addClass('disabled-pay');
         }
     })
-
+    let src=sessionStorage.getItem('src');
+if(src!=null&&src!=''){
+    $('.chose-bottom .image-box:last').siblings().removeClass('select');
+    $('.chose-bottom .image-box:last').addClass('select').children().attr('src',src);
+}
 })
 
 $('.msg-r .how-to-btn').click(function () {
@@ -36,3 +40,10 @@ $('.msg-r .how-to-btn').click(function () {
 $('#toggleShowGuide').click(function () {
     $('.guide-container').hide();
 })
+
+$('.pay-button-container .pay-button').click(function () {
+    if(!$(this).hasClass('disabled-pay')){
+        location.href='./my.html';
+    }
+})
+
