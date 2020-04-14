@@ -1,0 +1,138 @@
+<!doctype html>
+<html rem="750">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="divport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>欢乐拼图-我的记录</title>
+    <link rel="stylesheet" href="css/rem.css">
+    <link rel="stylesheet" href="css/myrecord.css">
+
+    <body>
+
+        <div class="navbar">
+
+            <div class="navbar-item active">我发出的</div>
+
+            <div class="navbar-item-q">我抢过的</div>
+
+        </div>
+
+        <div class="content-container">
+            <div class="content-body">
+                <div class="main-content">
+                    <img class="avatar" src="images/grab/crown.png"></img>
+                    <div class="content-text">
+                        <span class="userName" style="color: #586c94;">Z</span> 共发出</div>
+                    <div class="weui-flex overview">
+                        <div class="weui-flex__item">
+                            <span class="title">金额 (元)</span>
+                            <span class="content">1.00</span>
+                        </div>
+                        <div class="weui-flex__item">
+                            <span class="title">数量 (个)</span>
+                            <span class="content">1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="record-container">
+                    <div class="cell">
+                        <div class="item item-info">
+                            <div class="text">
+                                <div class="name">拼图红包</div>
+                                <div class="time">4月14日 14:08</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <div class="amount">1.00元</div>
+                                <div class="tips">
+                                    <span>已抢完</span> 1/1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width:100%; text-align:center;;font-size: 0.32rem;position: absolute;
+            bottom: 0.5rem;">
+                <a class="page-foot" style="padding-bottom: 0.18rem; display:inline-block;" href="index.html">
+                    <div class="foot2">返回首页</div>
+                </a>
+                <div style="width:0.01rem; height:0.28rem; border-left:0.01rem solid #d9d9d9; display:inline-block; margin:0 0.15rem; vertical-align:middle;"></div>
+                <a href="" class="foot2 page-foot" style="padding-top:0; display:inline-block;">常见问题</a>
+            </div>
+        </div>
+
+        <div class="content-container-q">
+            <div class="content-body">
+                <div class="main-content">
+                    <img class="avatar" src="images/grab/crown.png"></img>
+                    <div class="content-text">
+                        <span class="userName" style="color: #586c94;">Z</span> 共收到</div>
+                    <div class="weui-flex overview">
+                        <div class="weui-flex__item">
+                            <span class="title">金额 (元)</span>
+                            <span class="content">1.00</span>
+                        </div>
+                        <div class="weui-flex__item">
+                            <span class="title">数量 (个)</span>
+                            <span class="content">1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="record-container">
+                    <div class="cell">
+                        <div class="item item-info">
+                            <div class="text">
+                                <img class="list-avatar" src="images/grab/crown.png"></image>
+                                <view style="display:inline-block;">
+                                    <view class="name">拼图红包-来自Z</view>
+                                    <view class="time">4月14日 14:11</view>
+                                </view>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <div class="amount">1.00元</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width:100%; text-align:center;;font-size: 0.32rem;position: absolute;
+            bottom: 0.5rem;">
+                <a class="page-foot" style="padding-bottom: 0.18rem; display:inline-block;" href="index.html">
+                    <div class="foot2">返回首页</div>
+                </a>
+                <div style="width:0.01rem; height:0.28rem; border-left:0.01rem solid #d9d9d9; display:inline-block; margin:0 0.15rem; vertical-align:middle;"></div>
+                <a href="" class="foot2 page-foot" style="padding-top:0; display:inline-block;">常见问题</a>
+            </div>
+        </div>
+
+    </body>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <script>
+        $('.content-container-q').hide();
+        $('.content-container').show();
+        $('.navbar-item').click(function() {
+            $('.navbar-item-q').removeClass('active');
+            $(this).addClass('active');
+            $('.content-container-q').fadeOut();
+            setTimeout(function() {
+                $('.content-container').fadeIn();
+            }, 500);
+        })
+        $('.navbar-item-q').click(function() {
+            $('.navbar-item').removeClass('active');
+            $(this).addClass('active');
+            $('.content-container').fadeOut();
+            setTimeout(function() {
+                $('.content-container-q').fadeIn();
+            }, 500);
+        })
+    </script>
+
+</head>

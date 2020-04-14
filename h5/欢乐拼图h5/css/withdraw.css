@@ -1,0 +1,28 @@
+/* 清除默认样式 */
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.withdraw-item {
+    border-bottom: 0.01rem solid #c4c4c4;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-title {
+    font-size: 0.32rem;
+    color: #333;
+}
+
+.left-time {
+    font-size: 0.28rem;
+    color: #c4c4c4;
+    margin-top: 0.1rem;
+}
+
+.item-right {
+    text-align: right;
+}
