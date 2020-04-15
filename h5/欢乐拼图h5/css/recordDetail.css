@@ -10,6 +10,11 @@ a {
     color: #333;
 }
 
+input {
+    border: none;
+    background: none;
+}
+
 .record-top {
     position: absolute;
     top: -1.3rem;
@@ -152,6 +157,8 @@ a {
     margin: 1rem 0.4rem 0;
     font-size: 0.28rem;
     color: #FFF;
+    position: relative;
+    text-align: center;
 }
 
 .nan-btn-icon {
@@ -159,6 +166,20 @@ a {
     height: 0.3rem;
     display: block;
     margin-right: 0.07rem;
+}
+
+#demo1 {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    color: rgba(255, 255, 255, 0);
+}
+
+#value1 {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    z-index: -1;
 }
 
 
@@ -170,7 +191,7 @@ a {
     align-items: flex-end;
     justify-content: center;
     padding-top: 0.51rem;
-    padding-bottom: 1.2rem;
+    padding-bottom: 0.51rem;
     position: relative;
 }
 
@@ -554,6 +575,7 @@ a {
     height: 1.3rem;
 }
 
+<<<<<<< HEAD
 /*dd*/
 .puzzle-pane {
     position: fixed;
@@ -734,4 +756,26 @@ a {
     width: 0.36rem;
     height: 0.36rem;
     margin-right: 0.05rem;
+=======
+
+/* 查看图片 */
+
+.pic-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 1);
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+}
+
+.pic-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7.5rem;
+    height: 7.5rem;
+>>>>>>> aae964c842725a028ee5ecc98d8c2ba2e970840b
 }

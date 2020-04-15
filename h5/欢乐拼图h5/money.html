@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="divport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>欢乐拼图-余额提现</title>
     <link rel="stylesheet" href="css/rem.css">
@@ -107,7 +107,7 @@
                             <div class="foot2">返回首页</div>
                         </a>
                         <div class="line"></div>
-                        <a class="foot2 page-foot qa-btn" href="">常见问题</a>
+                        <a class="foot2 page-foot qa-btn" href="my_question.html">常见问题</a>
                         <div class="line"></div>
                         <a class="contact" href="">联系客服</a>
                     </div>
@@ -136,50 +136,5 @@
     </body>
 
     <script src="js/jquery-1.11.3.min.js"></script>
-
-    <script>
-        $('.tips-box').hide();
-        $('.invalidHint').hide();
-        if ($('.money-input').val() == '') {
-            $('.all-cashback-btn').click(function() {
-                $('.invalidHint').show();
-                $('.invalidHint').text('提现金额不能低于1元');
-            })
-            setTimeout(function() {
-                $('.invalidHint').hide();
-            }, 3000)
-            $('.cashback-button').click(function() {
-                $('.content-content').text('请输入有效提现金额');
-                $('.tips-box').show();
-            })
-        }
-        $('.money-input').bind("input propertychange", function() {
-
-            if ($('.money-input').val() < 1) {
-                $('.all-cashback-btn').click(function() {
-                    $('.invalidHint').show();
-                    $('.invalidHint').text('提现金额不能低于1元');
-                })
-                setTimeout(function() {
-                    $('.invalidHint').hide();
-                }, 3000)
-                $('.cashback-button').click(function() {
-                    $('.content-content').text('提现金额不得小于1元');
-                    $('.tips-box').show();
-                    $('.money-input').val() == '';
-                })
-            }
-            if ($('.money-input').val() > 1) {
-                $('.cashback-button').click(function() {
-                    $('.tips-box').hide();
-                })
-            }
-        });
-
-
-        $('.content-close').click(function() {
-            $('.tips-box').hide();
-        })
-    </script>
-
+    <script src="js/money.js"></script>
 </head>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="divport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>欢乐拼图-我的记录</title>
     <link rel="stylesheet" href="css/rem.css">
@@ -37,21 +37,23 @@
                     </div>
                 </div>
                 <div class="record-container">
-                    <div class="cell">
-                        <div class="item item-info">
-                            <div class="text">
-                                <div class="name">拼图红包</div>
-                                <div class="time">4月14日 14:08</div>
+                    <a href="recordDetail.html">
+                        <div class="cell">
+                            <div class="item item-info">
+                                <div class="text">
+                                    <div class="name">拼图红包</div>
+                                    <div class="time">4月14日 14:08</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="text">
+                                    <div class="amount">1.00元</div>
+                                    <div class="tips">
+                                        <span>已抢完</span> 1/1</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="text">
-                                <div class="amount">1.00元</div>
-                                <div class="tips">
-                                    <span>已抢完</span> 1/1</div>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div style="width:100%; text-align:center;;font-size: 0.32rem;position: absolute;
@@ -60,7 +62,7 @@
                     <div class="foot2">返回首页</div>
                 </a>
                 <div style="width:0.01rem; height:0.28rem; border-left:0.01rem solid #d9d9d9; display:inline-block; margin:0 0.15rem; vertical-align:middle;"></div>
-                <a href="" class="foot2 page-foot" style="padding-top:0; display:inline-block;">常见问题</a>
+                <a href="my_question.html" class="foot2 page-foot" style="padding-top:0; display:inline-block;">常见问题</a>
             </div>
         </div>
 
@@ -82,22 +84,24 @@
                     </div>
                 </div>
                 <div class="record-container">
-                    <div class="cell">
-                        <div class="item item-info">
-                            <div class="text">
-                                <img class="list-avatar" src="images/grab/crown.png"></image>
-                                <view style="display:inline-block;">
-                                    <view class="name">拼图红包-来自Z</view>
-                                    <view class="time">4月14日 14:11</view>
-                                </view>
+                    <a href="recordDetail.html">
+                        <div class="cell">
+                            <div class="item item-info">
+                                <div class="text">
+                                    <img class="list-avatar" src="images/grab/crown.png"></image>
+                                    <view style="display:inline-block;">
+                                        <view class="name">拼图红包-来自Z</view>
+                                        <view class="time">4月14日 14:11</view>
+                                    </view>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="text">
+                                    <div class="amount">1.00元</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="text">
-                                <div class="amount">1.00元</div>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div style="width:100%; text-align:center;;font-size: 0.32rem;position: absolute;
@@ -106,33 +110,12 @@
                     <div class="foot2">返回首页</div>
                 </a>
                 <div style="width:0.01rem; height:0.28rem; border-left:0.01rem solid #d9d9d9; display:inline-block; margin:0 0.15rem; vertical-align:middle;"></div>
-                <a href="" class="foot2 page-foot" style="padding-top:0; display:inline-block;">常见问题</a>
+                <a href="my_question.html" class="foot2 page-foot" style="padding-top:0; display:inline-block;">常见问题</a>
             </div>
         </div>
 
     </body>
 
     <script src="js/jquery-1.11.3.min.js"></script>
-
-    <script>
-        $('.content-container-q').hide();
-        $('.content-container').show();
-        $('.navbar-item').click(function() {
-            $('.navbar-item-q').removeClass('active');
-            $(this).addClass('active');
-            $('.content-container-q').fadeOut();
-            setTimeout(function() {
-                $('.content-container').fadeIn();
-            }, 500);
-        })
-        $('.navbar-item-q').click(function() {
-            $('.navbar-item').removeClass('active');
-            $(this).addClass('active');
-            $('.content-container').fadeOut();
-            setTimeout(function() {
-                $('.content-container-q').fadeIn();
-            }, 500);
-        })
-    </script>
-
+    <script src="js/myrecord.js"></script>
 </head>
