@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="divport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>欢乐拼图-我的记录</title>
     <link rel="stylesheet" href="css/rem.css">
     <link rel="stylesheet" href="css/recordDetail.css">
+    <link rel="stylesheet" href="css/LArea.css">
 
     <body>
 
@@ -53,7 +54,11 @@
 
                 <div class="money"> <span>1.00</span>元 </div>
 
-                <div class="yue">已存入账户余额></div>
+                <div class="yue">
+                    <a href="money.html" style="color: #FFF;">
+                    已存入账户余额>
+                    </a>
+                </div>
 
             </div>
 
@@ -62,64 +67,69 @@
             <div class="nan-btn">
                 <img class="nan-btn-icon" src="images/result/icon-nz.png"></img>
                 难度设置
+                <input id="demo1" type="text" readonly="" placeholder="" value="" />
             </div>
 
             <!-- 查看图片 -->
 
-            <div class="cha-btn">
-                <img class="nan-btn-icon" src="images/result/icon-see.png"></img>
+            <div class="cha-btn ">
+                <img class="nan-btn-icon " src="images/result/icon-see.png "></img>
                 查看图片
             </div>
 
             <!-- 按钮 -->
 
-            <div class="bottom-btns">
-                <div class="normal-btn">
-                    <img class="pic" src="images/result/get_btn_redpack.png"></img>
-                    <div class="btn-text">我也要发红包</div>
+            <div class="bottom-btns ">
+                <div class="normal-btn ">
+                    <img class="pic " src="images/result/get_btn_redpack.png "></img>
+                    <div class="btn-text ">我也要发红包</div>
                 </div>
 
-                <div class="big-btn-container">
-                    <img src="images/result/get_btn_start.png" alt="">
+                <div class="big-btn-container ">
+                    <img src="images/result/get_btn_start.png " alt=" ">
                 </div>
 
-                <div class="time-btn-container">
-                    <div class="time-box">
-                        <div class="time-s"><span>68</span>秒</div>
-                        <div class="time-s">完成拼图</div>
+                <div class="time-btn-container ">
+                    <div class="time-box ">
+                        <div class="time-s "><span>68</span>秒</div>
+                        <div class="time-s ">完成拼图</div>
                     </div>
                 </div>
-                <div class="normal-btn">
-                    <img class="pic" src="images/result/get_btn_share.png"></img>
-                    <div class="btn-text">邀请好友来玩</div>
+                <div class="normal-btn ">
+                    <img class="pic " src="images/result/get_btn_share.png "></img>
+                    <div class="btn-text ">邀请好友来玩</div>
                 </div>
             </div>
 
             <!-- 上拉查看详情 -->
 
-            <div class="bottom-text">上拉查看领取详情</div>
+            <div class="bottom-text ">上拉查看领取详情</div>
 
         </div>
 
         <!-- 第二页 -->
 
-        <div class="recordDetail">
-            <div class="redpack-info">
-                <div class="weui-flex">
-                    <div class="weui-flex__item head-text">
+        <div class="recordDetail ">
+            <div class="redpack-info ">
+                <div class="weui-flex ">
+                    <div class="weui-flex__item head-text ">
                         <span>已领取0/1个</span>
                         <span>，剩余1/1元</span>
                     </div>
-                    <div class="report-link">投诉</div>
+                    <div class="report-link ">
+                        <a href="my_report.html ">
+                        投诉
+                    </a>
+                    </div>
                 </div>
             </div>
-            <div class="record-box">
-                <div class="no-record-view">
-                    <img src="images/result/no_record.png" style="width: 4.94rem;height:3.57rem;"></img>
-                    <div class="no-record-text-view">
+            <div class="record-box ">
+                <div class="no-record-view ">
+                    <img src="images/result/no_record.png " style="width: 4.94rem;height:3.57rem; "></img>
+                    <div class="no-record-text-view ">
                         <div>还没有人领到红包哦～</div>
-                        <div class="second">赶紧发送给朋友来抢红包吧～</div>
-                        <div class="no-record-share-btn">
+                        <div class="second ">赶紧发送给朋友来抢红包吧～</div>
+                        <div class="no-record-share-btn ">
                             发送给朋友
                         </div>
                     </div>
@@ -128,25 +138,25 @@
 
             <!-- 回答列表 -->
 
-            <div class="record-item">
-                <div class="user-info-container">
-                    <img class="record-avatar" src="images/grab/crown.png"></img>
-                    <div class="record-msg">
-                        <div class="msg-row">
-                            <div class="record-nickname">
-                                <div class="nickname-limit">Z</div>
-                                <img class="record-gender" src="images/result/iocn_xbn.png"></img>
+            <div class="record-item ">
+                <div class="user-info-container ">
+                    <img class="record-avatar " src="images/grab/crown.png "></img>
+                    <div class="record-msg ">
+                        <div class="msg-row ">
+                            <div class="record-nickname ">
+                                <div class="nickname-limit ">Z</div>
+                                <img class="record-gender " src="images/result/iocn_xbn.png "></img>
                             </div>
                         </div>
-                        <div class="msg-row">
-                            <div class="record-score-item">15秒</div>
-                            <div class="record-score-item">1次</div>
-                            <div class="record-score-item">1.00元</div>
+                        <div class="msg-row ">
+                            <div class="record-score-item ">15秒</div>
+                            <div class="record-score-item ">1次</div>
+                            <div class="record-score-item ">1.00元</div>
                         </div>
-                        <div class="msg-row">
-                            <div class="record-score-title">用时</div>
-                            <div class="record-score-title">拼图次数</div>
-                            <div class="record-score-title">4月14日 18:34</div>
+                        <div class="msg-row ">
+                            <div class="record-score-title ">用时</div>
+                            <div class="record-score-title ">拼图次数</div>
+                            <div class="record-score-title ">4月14日 18:34</div>
                         </div>
                     </div>
                 </div>
@@ -154,38 +164,38 @@
 
             <!-- 更多好玩 -->
 
-            <div class="mores">
+            <div class="mores ">
 
-                <div class="games-box">
+                <div class="games-box ">
 
-                    <div class="games-item">
-                        <a href="">
-                            <div class="logos-box">
-                                <img class="logos" src="images/logo-sing.png" alt="">
+                    <div class="games-item ">
+                        <a href=" ">
+                            <div class="logos-box ">
+                                <img class="logos " src="images/logo-sing.png " alt=" ">
                             </div>
                             唱歌红包
                         </a>
                     </div>
-                    <div class="games-item">
-                        <a href="">
-                            <div class="logos-box">
-                                <img class="logos" src="images/logo-question.png" alt="">
+                    <div class="games-item ">
+                        <a href=" ">
+                            <div class="logos-box ">
+                                <img class="logos " src="images/logo-question.png " alt=" ">
                             </div>
                             答题红包
                         </a>
                     </div>
-                    <div class="games-item">
-                        <a href="">
-                            <div class="logos-box">
-                                <img class="logos" src="images/logo-eye.png" alt="">
+                    <div class="games-item ">
+                        <a href=" ">
+                            <div class="logos-box ">
+                                <img class="logos " src="images/logo-eye.png " alt=" ">
                             </div>
                             拼眼力红包
                         </a>
                     </div>
-                    <div class="games-item">
-                        <a href="">
-                            <div class="logos-box">
-                                <img class="logos" src="images/logo-speak.png" alt="">
+                    <div class="games-item ">
+                        <a href=" ">
+                            <div class="logos-box ">
+                                <img class="logos " src="images/logo-speak.png " alt=" ">
                             </div>
                             说口令红包
                         </a>
@@ -197,25 +207,25 @@
 
             <!-- 失败列表 -->
 
-            <div class="record-item">
-                <div class="user-info-container">
-                    <img class="record-avatar" src="images/grab/crown.png"></img>
-                    <div class="record-msg">
-                        <div class="msg-row">
-                            <div class="record-nickname">
-                                <div class="nickname-limit">Z</div>
-                                <img class="record-gender" src="images/result/iocn_xbnv.png"></img>
+            <div class="record-item ">
+                <div class="user-info-container ">
+                    <img class="record-avatar " src="images/grab/crown.png "></img>
+                    <div class="record-msg ">
+                        <div class="msg-row ">
+                            <div class="record-nickname ">
+                                <div class="nickname-limit ">Z</div>
+                                <img class="record-gender " src="images/result/iocn_xbnv.png "></img>
                             </div>
                         </div>
-                        <div class="msg-row">
-                            <div class="record-score-item">15秒</div>
-                            <div class="record-score-item">1次</div>
-                            <div class="record-score-item">挑战失败</div>
+                        <div class="msg-row ">
+                            <div class="record-score-item ">15秒</div>
+                            <div class="record-score-item ">1次</div>
+                            <div class="record-score-item ">挑战失败</div>
                         </div>
-                        <div class="msg-row">
-                            <div class="record-score-title">用时</div>
-                            <div class="record-score-title">拼图次数</div>
-                            <div class="record-score-title">4月14日 18:34</div>
+                        <div class="msg-row ">
+                            <div class="record-score-title ">用时</div>
+                            <div class="record-score-title ">拼图次数</div>
+                            <div class="record-score-title ">4月14日 18:34</div>
                         </div>
                     </div>
                 </div>
@@ -225,39 +235,39 @@
 
         <!-- more -->
 
-        <div class="more">
+        <div class="more ">
 
-            <img src="images/more/tb-gdhw_hide.png" alt="">
+            <img src="images/more/tb-gdhw_hide.png " alt=" ">
 
         </div>
 
-        <div class="more-box">
+        <div class="more-box ">
 
-            <img class="more-title" src="images/more/tb-gdhw_open.png" alt="">
+            <img class="more-title " src="images/more/tb-gdhw_open.png " alt=" ">
 
-            <div class="game-box">
+            <div class="game-box ">
 
-                <div class="game-item">
-                    <div class="game-logo">
-                        <img src="images/logo-sing.png" alt="">
+                <div class="game-item ">
+                    <div class="game-logo ">
+                        <img src="images/logo-sing.png " alt=" ">
                     </div>
                     唱歌红包
                 </div>
-                <div class="game-item">
-                    <div class="game-logo">
-                        <img src="images/logo-question.png" alt="">
+                <div class="game-item ">
+                    <div class="game-logo ">
+                        <img src="images/logo-question.png " alt=" ">
                     </div>
                     答题红包
                 </div>
-                <div class="game-item">
-                    <div class="game-logo">
-                        <img src="images/logo-eye.png" alt="">
+                <div class="game-item ">
+                    <div class="game-logo ">
+                        <img src="images/logo-eye.png " alt=" ">
                     </div>
                     拼眼力红包
                 </div>
-                <div class="game-item">
-                    <div class="game-logo">
-                        <img src="images/logo-speak.png" alt="">
+                <div class="game-item ">
+                    <div class="game-logo ">
+                        <img src="images/logo-speak.png " alt=" ">
                     </div>
                     说口令红包
                 </div>
@@ -266,47 +276,19 @@
 
         </div>
 
+        <!-- 查看图片 -->
+
+        <div class="pic-box ">
+
+            <img class="pic-content " src="images/grab/crown.png " alt=" ">
+
+        </div>
+
     </body>
 
-    <script src="js/jquery-1.11.3.min.js"></script>
-
-    <script>
-        $('.record-box').hide();
-        $('.more-box').hide();
-        $('.bottom-text').hide();
-        $('.middle').hide();
-        $('.nan-btn').hide();
-        $('.big-btn-container').hide();
-
-        function chu() {
-            setTimeout(function() {
-                $('.bottom-text').fadeIn();
-            }, 100);
-            setTimeout(function() {
-                $('.bottom-text').fadeOut();
-            }, 2000);
-        }
-
-        window.setInterval('chu()', 4000);
-
-        $('.more').click(function() {
-            $('.more-box').show();
-            $('.more-title').animate({
-                right: '0.5rem'
-            }, 'slow');
-            $('.game-box').animate({
-                right: '0'
-            }, 'slow');
-        })
-        $('.more-box').click(function() {
-            $('.more-box').hide();
-            $('.more-title').css({
-                right: '-1.5rem'
-            });
-            $('.game-box').css({
-                right: '-2rem'
-            })
-        })
-    </script>
+    <script src="js/jquery-1.11.3.min.js "></script>
+    <script src="js/LAreaData1.js "></script>
+    <script src="js/LArea.js "></script>
+    <script src="js/recordDetail.js"></script>
 
 </head>
