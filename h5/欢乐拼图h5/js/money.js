@@ -29,9 +29,10 @@ $('.money-input').bind("input propertychange", function() {
             $('.money-input').val() == '';
         })
     }
-    if ($('.money-input').val() > 1) {
+    if ($('.money-input').val() >= 1) {
         $('.cashback-button').click(function() {
             $('.tips-box').hide();
+            window.location.href = 'cashsuccess.html';
         })
     }
 });

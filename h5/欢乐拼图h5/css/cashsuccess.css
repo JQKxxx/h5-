@@ -1,0 +1,77 @@
+.page-container {
+    text-align: center;
+}
+
+.title {
+    font-size: 0.45rem;
+    font-family: FZLTZHK;
+    font-weight: bold;
+    color: rgba(46, 153, 46, 1);
+    line-height: 1;
+    margin: 0.99rem 0 0.29rem;
+}
+
+.desc {
+    font-size: 0.35rem;
+    font-family: FZLTH;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+    line-height: 1;
+    margin-bottom: 0.29rem;
+}
+
+.arrow {
+    width: 1.6rem;
+    height: 0.64rem;
+    display: block;
+    margin: 0 auto 0.58rem;
+}
+
+.content {
+    width: 6.9rem;
+    height: 6.13rem;
+    display: block;
+    margin: 0 auto 0.60rem;
+}
+
+.gzh-btn {
+    width: 5.6rem;
+    height: 0.94rem;
+    background: rgba(239, 78, 58, 1);
+    box-shadow: 0 0.02rem 0.07rem 0 rgba(206, 42, 34, 1), 0 0.02rem 0.1rem 0 rgba(206, 42, 34, 0.5), 0 -0.02rem 0.1rem 0 rgba(206, 42, 34, 0.5);
+    border-radius: 0.47rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    font-size: 0.34rem;
+    font-family: FZLTZHK;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 1);
+    margin: auto;
+    animation: btnMove 1.4s linear infinite;
+}
+
+@-webkit-keyframes btnMove {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.2);
+    }
+    80% {
+        transform: scale(1);
+    }
+}
+
+@keyframes btnMove {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.2);
+    }
+    80% {
+        transform: scale(1);
+    }
+}
