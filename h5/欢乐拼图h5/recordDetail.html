@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="divport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>欢乐拼图-我的记录</title>
     <link rel="stylesheet" href="css/rem.css">
@@ -114,9 +114,9 @@
                 </div>
             </div>
             <div class="record-box">
-                <div class="no-record-view">
+                <div class="no-record-div">
                     <img src="images/result/no_record.png" style="width: 4.94rem;height:3.57rem;"></img>
-                    <div class="no-record-text-view">
+                    <div class="no-record-text-div">
                         <div>还没有人领到红包哦～</div>
                         <div class="second">赶紧发送给朋友来抢红包吧～</div>
                         <div class="no-record-share-btn">
@@ -265,8 +265,57 @@
             </div>
 
         </div>
+<!--开始挑战弹窗口-->
+        <div class="puzzle-pane" style="">
+            <button class="challenge-button"  style="right: 0rem;">
+                <div class="challenge-container">
+                    <img class="challenge-icon" src="./images/grab/challenge.png"/>
+                    <text style="vertical-align:middle;font-size:0.258rem;">挑战好友</text>
+                </div>
+            </button>
+            <div class="elapse-time">
+                <img class="puzzle-time-icon" src="./images/grab/time.png"/>
+                <div>用时<text class="fixed-width">74</text>秒</div>
+                <div >
+                    , 剩余<text class="fixed-width">20</text>秒
+                </div>
+            </div>
+            <div class="chips-container" style="width:6.2rem;height:6.2rem;">
+                <div class="chips-overlay" hidden>
+                    <img class="puzzle-fail-icon" style="width: 100%;height: 100%;" src="./images/grab/puzzle-fail.png">
+                    <div class="try-again-tip">时间到，挑战失败!</div>
+                    <div  class="try-again-button">
+                        <text>再试一次</text>
+                    </div>
+                </div>
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png" />-->
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png" />-->
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png" />-->
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png" />-->
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png"/>-->
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png" />-->
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png" />-->
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png" />-->
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png"/>-->
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png" />-->
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png" />-->
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png" />-->
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png" />-->
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png"/>-->
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png" />-->
+                <!--<img class="chip" data-index="0" src="images/common/dztz.png" />-->
+            </div>
+            <div class="puzzle-tip" >点击图块交换位置，拼图成功自动领取红包</div>
+            <div class="puzzle-bottom-container">
+                <div class="puzzle-bottom-button close-puzzle-button">
+                    <img class="puzzle-bottom-icon" src="./images/grab/sad.png" />
+                    <text>放弃挑战</text>
+                </div>
+            </div>
+        </div>
 
-    </body>
+
+</body>
 
     <script src="js/jquery-1.11.3.min.js"></script>
 
@@ -310,3 +359,5 @@
     </script>
 
 </head>
+
+</html>

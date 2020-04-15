@@ -553,3 +553,185 @@ a {
     width: 1.1rem;
     height: 1.3rem;
 }
+
+/*dd*/
+.puzzle-pane {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out,-webkit-transform 0.5s ease-in-out;
+    z-index: 1001;
+}
+
+.challenge-button {
+    position: absolute;
+    top: 1rem;
+    width: 2rem;
+    height: 1rem;
+    padding: 0.2rem 0;
+    color: #ffaa3b;
+    font-size: 0.31rem;
+    transition: right 1s;
+    background-color: transparent;
+    border: none;
+}
+
+.challenge-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0.6rem;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    background-color: #3a3a3a;
+}
+
+.challenge-icon {
+    width: 0.4rem;
+    margin-right: 0.05rem;
+    vertical-align: middle;
+}
+
+.elapse-time {
+    min-width: 3.75rem;
+    padding: 0 0.2rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    border-radius: 0.3rem;
+    border: 0.01rem solid white;
+    color: white;
+    margin-top: 2.7rem;
+    font-size: 0.32rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.puzzle-time-icon {
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-right: 0.05rem;
+}
+
+.fixed-width {
+}
+
+.chips-container {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.chips-overlay {
+    width: 4.5rem;
+    height: 4.5rem;
+    position: absolute;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.85);
+    display: flex;
+    bottom: 40%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle-fail-icon {
+    width: 3.43rem;
+    height: 3.01rem;
+}
+
+.try-again-tip {
+    color: white;
+    font-size: 0.36rem;
+    margin-top: 0.1rem;
+}
+
+.try-again-button {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    height: 0.8rem;
+    width: 3rem;
+    line-height: 0.8rem;
+    padding: 0 0.5rem;
+    border-radius: 0.4rem;
+    background-color: #ffaa3b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.try-again-icon {
+    width: 0.36rem;
+    height: 0.36rem;
+    margin-right: 0.05rem;
+}
+
+.chip {
+    z-index: 99;
+    width: 1.5rem;
+    height: 1.5rem;
+    box-sizing: border-box;
+}
+
+.chip-selected {
+    position: absolute;
+    border: 0.01rem solid red;
+    z-index: 999;
+    transition: margin 1s;
+    background: black;
+    opacity: 0.7;
+    box-sizing: border-box;
+}
+
+.puzzle-tip {
+    width: 100%;
+    text-align: center;
+    color: #bbb;
+    margin-top: 0.4rem;
+    font-size: 0.28rem;
+}
+
+.puzzle-bottom-container {
+    position: absolute;
+    bottom: 0.4rem;
+    width: 100%;
+    font-size: 0.32rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle-bottom-button {
+    height:0.8rem;
+    line-height: 0.8rem;
+    padding: 0 0.5rem;
+    border-radius: 0.4rem;
+    background-color: #3a3a3a;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-puzzle-button {
+}
+
+.puzzle-bottom-icon {
+    width: 0.36rem;
+    height: 0.36rem;
+    margin-right: 0.05rem;
+}
