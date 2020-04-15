@@ -57,3 +57,10 @@ area1.init({
     'type': 1, //数据源类型
     'data': LAreaData //数据源
 });
+
+
+
+//弹窗js
+$('.puzzle-bottom-button.close-puzzle-button').click(function () {
+    $('.puzzle-pane').hide();
+})
