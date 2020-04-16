@@ -43,7 +43,7 @@ $('#toggleShowGuide').click(function () {
 
 $('.pay-button-container .pay-button').click(function () {
     if(!$(this).hasClass('disabled-pay')){
-        location.href='./my.html';
+        location.href='./poster.html';
     }
 })
 
