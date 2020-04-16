@@ -6,6 +6,7 @@ $('.nan-btn').hide();
 $('.big-btn-container').show();
 $('.pic-box').hide();
 $('.chips-overlay .chip').hide();
+
 function chu() {
     setTimeout(function() {
         $('.bottom-text').fadeIn();
@@ -62,11 +63,20 @@ area1.init({
 
 //弹窗js
 //    点击开始出现弹窗
-$('.big-btn-container').click(function () {
-    $('.puzzle-pane').show();
-    $('.chips-overlay .chip').show();
-})
-//     点击隐藏弹窗
-$('.puzzle-bottom-button.close-puzzle-button').click(function () {
+$('.chips-overlay').hide();
+$('.challenge-button').hide();
+$('.elapse-time').hide();
+$('.shi-box').hide();
+$('.puzzle-bottom-container').hide();
+$('.big-btn-container').click(function() {
+        $('.puzzle-pane').show();
+        $('.chips-overlay .chip').show();
+        $('.elapse-time').show();
+        $('.puzzle-bottom-container').show();
+    })
+    //     点击隐藏弹窗
+$('.puzzle-bottom-button.close-puzzle-button').click(function() {
     $('.puzzle-pane').hide();
+    $('.elapse-time').hide();
+    $('.puzzle-bottom-container').hide();
 })
