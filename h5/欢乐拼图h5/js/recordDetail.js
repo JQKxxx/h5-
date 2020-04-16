@@ -69,6 +69,7 @@ $('.elapse-time').hide();
 $('.shi-box').hide();
 $('.puzzle-bottom-container').hide();
 $('.big-btn-container').click(function() {
+<<<<<<< HEAD
     $('.puzzle-pane').show();
     $('.chips-overlay .chip').show();
     $('.elapse-time').show();
@@ -78,10 +79,19 @@ $('.big-btn-container').click(function() {
     sortAll();
 })
 //     点击隐藏弹窗
+=======
+        $('.puzzle-pane').show();
+        $('.chips-overlay .chip').show();
+        $('.elapse-time').show();
+        $('.puzzle-bottom-container').show();
+    })
+    //     点击隐藏弹窗
+>>>>>>> d29c8e9eb09d690eb35b4dfe3779988ded36d9e7
 $('.puzzle-bottom-button.close-puzzle-button').click(function() {
     $('.puzzle-pane').hide();
     $('.elapse-time').hide();
     $('.puzzle-bottom-container').hide();
+<<<<<<< HEAD
 })
 
 var ImgArr=new Array(9);
@@ -223,3 +233,6 @@ function exchange(el1, el2){
     ep1.insertBefore(el2,ep1.children[index1]);
 }
 
+=======
+})
+>>>>>>> d29c8e9eb09d690eb35b4dfe3779988ded36d9e7

@@ -575,19 +575,21 @@ input {
     height: 1.3rem;
 }
 
+
 /*dd*/
+
 .puzzle-pane {
     position: fixed;
     top: 0rem;
     left: 0rem;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out,-webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
     z-index: 1001;
 }
 
@@ -602,6 +604,7 @@ input {
     transition: right 1s;
     background-color: transparent;
     border: none;
+    z-index: 1003;
 }
 
 .challenge-container {
@@ -628,12 +631,15 @@ input {
     border-radius: 0.3rem;
     border: 0.01rem solid white;
     color: white;
-    margin-top: 2.7rem;
+    position: absolute;
+    top: 2.7rem;
+    left: 1.875rem;
     font-size: 0.32rem;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1003;
 }
 
 .puzzle-time-icon {
@@ -642,13 +648,26 @@ input {
     margin-right: 0.05rem;
 }
 
-.fixed-width {
+.fixed-width {}
+
+.shi-box {
+    text-align: center;
+    z-index: 1003;
+    position: absolute;
+    top: 5rem;
+    left: 1.85rem;
 }
 
 .chips-container {
+<<<<<<< HEAD
     width:6.2rem;
     height:6.2rem;
     margin-top: 0.5rem;
+=======
+    position: absolute;
+    top: 3.8rem;
+    left: 0.65rem;
+>>>>>>> d29c8e9eb09d690eb35b4dfe3779988ded36d9e7
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -658,11 +677,13 @@ input {
 }
 
 .chips-overlay {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 100%;
+    height: 100vh;
     position: absolute;
-    z-index: 1000;
-    background-color: rgba(0,0,0,0.85);
+    top: 0;
+    left: 0;
+    z-index: 1002;
+    background-color: rgba(0, 0, 0, 0.85);
     display: flex;
     bottom: 40%;
     flex-direction: column;
@@ -671,8 +692,8 @@ input {
 }
 
 .puzzle-fail-icon {
-    width: 3.43rem;
-    height: 3.01rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 .try-again-tip {
@@ -750,7 +771,8 @@ input {
     width: 100%;
     text-align: center;
     color: #bbb;
-    margin-top: 0.4rem;
+    position: absolute;
+    top: 10.4rem;
     font-size: 0.28rem;
 }
 
@@ -762,10 +784,11 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1003;
 }
 
 .puzzle-bottom-button {
-    height:0.8rem;
+    height: 0.8rem;
     line-height: 0.8rem;
     padding: 0 0.5rem;
     border-radius: 0.4rem;
@@ -776,14 +799,14 @@ input {
     align-items: center;
 }
 
-.close-puzzle-button {
-}
+.close-puzzle-button {}
 
 .puzzle-bottom-icon {
     width: 0.36rem;
     height: 0.36rem;
     margin-right: 0.05rem;
 }
+
 
 /* 查看图片 */
 
@@ -804,5 +827,5 @@ input {
     transform: translate(-50%, -50%);
     width: 7.5rem;
     height: 7.5rem;
->>>>>>> aae964c842725a028ee5ecc98d8c2ba2e970840b
+    >>>>>>>aae964c842725a028ee5ecc98d8c2ba2e970840b
 }

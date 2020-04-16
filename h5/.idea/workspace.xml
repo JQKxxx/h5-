@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86cafef3-434e-4d0d-bc06-d5f22ca8d9c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/欢乐拼图h5/css/recordDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/欢乐拼图h5/css/recordDetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/欢乐拼图h5/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/欢乐拼图h5/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/欢乐拼图h5/js/recordDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/欢乐拼图h5/js/recordDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/欢乐拼图h5/my_question.html" beforeDir="false" afterPath="$PROJECT_DIR$/欢乐拼图h5/my_question.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/欢乐拼图h5/myrecord.html" beforeDir="false" afterPath="$PROJECT_DIR$/欢乐拼图h5/myrecord.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/欢乐拼图h5/poster.html" beforeDir="false" afterPath="$PROJECT_DIR$/欢乐拼图h5/poster.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/欢乐拼图h5/recordDeatil.html" beforeDir="false" afterPath="$PROJECT_DIR$/欢乐拼图h5/recordDeatil.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/欢乐拼图h5/recordDeatil.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="312" column="36" selection-start-line="312" selection-start-column="36" selection-end-line="312" selection-end-column="36" />
+            <state relative-caret-position="122">
+              <caret line="313" column="36" selection-start-line="313" selection-start-column="36" selection-end-line="313" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -34,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/欢乐拼图h5/css/recordDetail.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="713" column="28" selection-start-line="713" selection-start-column="28" selection-end-line="713" selection-end-column="28" />
+            <state relative-caret-position="766">
+              <caret line="734" column="28" selection-start-line="734" selection-start-column="28" selection-end-line="734" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -43,11 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/欢乐拼图h5/js/recordDetail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="141" column="23" lean-forward="true" selection-start-line="141" selection-start-column="23" selection-end-line="141" selection-end-column="23" />
-              <folding>
-                <element signature="e#4714#4746#0" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="151" column="23" lean-forward="true" selection-start-line="151" selection-start-column="23" selection-end-line="151" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -86,7 +78,7 @@
       <path value="E:/wamp64/www" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="84" />
     <option name="y" value="3" />
     <option name="width" value="1187" />
@@ -153,12 +145,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587021800975</updated>
-      <workItem from="1587021802769" duration="17050000" />
+      <workItem from="1587021802769" duration="17190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17050000" />
+    <option name="totallyTimeSpent" value="17190000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -201,25 +193,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/欢乐拼图h5/css/recordDetail.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="713" column="28" selection-start-line="713" selection-start-column="28" selection-end-line="713" selection-end-column="28" />
+        <state relative-caret-position="766">
+          <caret line="734" column="28" selection-start-line="734" selection-start-column="28" selection-end-line="734" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/欢乐拼图h5/recordDeatil.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="312" column="36" selection-start-line="312" selection-start-column="36" selection-end-line="312" selection-end-column="36" />
+        <state relative-caret-position="122">
+          <caret line="313" column="36" selection-start-line="313" selection-start-column="36" selection-end-line="313" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/欢乐拼图h5/js/recordDetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="141" column="23" lean-forward="true" selection-start-line="141" selection-start-column="23" selection-end-line="141" selection-end-column="23" />
-          <folding>
-            <element signature="e#4714#4746#0" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="151" column="23" lean-forward="true" selection-start-line="151" selection-start-column="23" selection-end-line="151" selection-end-column="23" />
         </state>
       </provider>
     </entry>
