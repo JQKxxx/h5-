@@ -73,7 +73,7 @@ window.LArea = (function() {
                     '</div>' +
                     '<div class="area_btn_box">' +
                     '<div class="area_btn larea_cancel">取消</div>' +
-                    '<div class="area_btn1 larea_finish">确定</div>' +
+                    '<div class="area_btn1 larea_finish" onclick="nan()">确定</div>' +
                     '</div>';
                 document.body.appendChild(_self.gearArea);
                 areaCtrlInit();
