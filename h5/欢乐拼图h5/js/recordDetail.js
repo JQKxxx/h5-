@@ -20,7 +20,6 @@ function chu() {
 window.setInterval('chu()', 4000);
 
 $('.more').click(function() {
-    console.log($('#demo1').val());
 
     $('.more-box').show();
     $('.more-title').animate({
@@ -94,19 +93,25 @@ $('.challenge-button').hide();
 $('.elapse-time').hide();
 $('.shi-box').hide();
 $('.puzzle-bottom-container').hide();
-$('.end_time').show();
-// console.log(inputv);
+// $('.end_time').show();
+
 var i = 0;
 var e = $('.fixed-width').text();
 var e_start_time = sessionStorage.getItem('start_time');
 var e_start_time_end = sessionStorage.getItem('start_time_end');
 
-if (e_start_time_end == 'null') {
-    $('.end_time').hide();
-}
+
 sessionStorage.setItem('start_time', 0);
 
 $('.big-btn-container').click(function() {
+     e_start_time_end = sessionStorage.getItem('start_time_end');
+    if (sessionStorage.getItem('start_time_end')==null||e_start_time_end=='null') {
+        console.log(1)
+        $('.end_time').hide();
+    }else {
+        console.log(2);
+        $('.end_time').show();
+    }
         showWindow();
     })
     //      点击开始
@@ -156,8 +161,8 @@ var timeJ = function() {
     var J = setInterval(() => {
         i++;
         $('.fixed-width').text(i);
-        if (i >= e_start_time_end) {
-            clearInterval(J);
+        if (e_start_time_end!=null&&i >= e_start_time_end) {
+
             $('.chips-container').css({
                 opacity: '0.2'
             });
@@ -165,6 +170,7 @@ var timeJ = function() {
             $('.challenge-button').show();
             $('.shi-box').show();
             $('.recordDetail ').hide();
+            clearInterval(J);
         }
     }, 1000)
     t1 = J;
@@ -224,8 +230,8 @@ function sortAll() {
 
 //点击交换位置
 
-$(document).on('click', '.chip', function() {
-
+setTimeout(function () {
+    $(document).on('click', '.chip', function() {
         if ($('.chip').hasClass('active')) {
             var a = sessionStorage.getItem('first_img');
             var b = $(this);
@@ -237,15 +243,12 @@ $(document).on('click', '.chip', function() {
 
             if (b.data('index') == a_next_index) {
                 if (!b_prev_prev_index) {
-                    console.log(111111);
                     var a_index = sessionStorage.getItem('a_index');
                     $(this).after(a);
                     // $('div[data-index='+a_index+']').remove();
                     $('.Imgbox').children().first().remove();
                 } else {
                     console.log(11);
-                    console.log(a_prev_index);
-                    console.log(b_prev_index);
                     sessionStorage.setItem('end_img', b.prop("outerHTML"));
                     $('div[data-index=' + a_prev_index + ']').after(b);
                     $('.Imgbox .chip').removeClass('active');
@@ -279,12 +282,11 @@ $(document).on('click', '.chip', function() {
 
                 if (a_prev_index == 'undefined' && b_prev_prev_index) {
                     console.log(1);
-                    console.log(b);
                     $('div[data-index=' + sessionStorage.getItem('a_index') + ']').before(b);
                     $('div[data-index=' + b_prev_index + ']').after(a);
                     $('.Imgbox .active').remove();
                 } else {
-                    if (b_prev_index == undefined) {
+                    if (b_prev_index == undefined && a_prev_index) {
                         $('.Imgbox').prepend(a);
                         $('div[data-index=' + a_prev_index + ']').after(b);
                         $('.Imgbox .active').remove();
@@ -331,12 +333,13 @@ $(document).on('click', '.chip', function() {
         $('.chip').each(function() {
             arr.push($(this).data('index'))
         })
-        console.log(arr);
         if (oldArr.toString() == arr.toString()) {
             $('.poster-box').show();
             hideWindow();
         }
     })
+},100)
+
     // 再试一次
 $('.try-again-button').click(function() {
         hideWindow();
@@ -349,3 +352,5 @@ $('.try-again-button').click(function() {
 $('.refresh_img').click(function() {
     $('.poster-box').hide();
 })
+
+//16张图

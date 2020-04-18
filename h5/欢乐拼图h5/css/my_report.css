@@ -116,6 +116,8 @@ button[type=primary]{
 }
 
 .report_cell {
+    display: flex;
+    align-items: center;
     padding: 0.2rem 0.32rem;
     font-size: 0.32rem;
     background-color: #fff;
@@ -123,64 +125,68 @@ button[type=primary]{
     border-top: 0.01rem solid #eee;
     border-bottom: 0.01rem solid #eee;
 }
-
+.report_cell img{
+    margin-left: 0.2rem;
+    width: 0.4rem;
+    display: inline-block;
+}
 .report_cell text {
-    vertical-align: middle;
+vertical-align: middle;
 }
 
 .report_cell icon {
-    margin-left: 0.12rem;
-    vertical-align: middle;
+margin-left: 0.12rem;
+vertical-align: middle;
 }
 
 .tips-box {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 11;
-    background-color: rgba(0, 0, 0, 0.7);
+width: 100%;
+height: 100vh;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 11;
+background-color: rgba(0, 0, 0, 0.7);
 }
 
 .tips-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 5rem;
-    height: 3.2rem;
-    background-color: #FFF;
-    border-radius: 0.1rem;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 5rem;
+height: 3.2rem;
+background-color: #FFF;
+border-radius: 0.1rem;
 }
 
 .content-title {
-    font-size: 0.36rem;
-    color: #333;
-    text-align: center;
-    margin-top: 0.3rem;
+font-size: 0.36rem;
+color: #333;
+text-align: center;
+margin-top: 0.3rem;
 }
 
 .content-content {
-    font-size: 0.28rem;
-    color: #c4c4c4;
-    text-align: center;
-    margin-top: 0.2rem;
-    padding: 0 0.4rem;
+font-size: 0.28rem;
+color: #c4c4c4;
+text-align: center;
+margin-top: 0.2rem;
+padding: 0 0.4rem;
 }
 
 .content-liner {
-    width: 100%;
-    height: 0.01rem;
-    background-color: #c4c4c4;
-    position: absolute;
-    bottom: 1rem;
-    left: 0;
+width: 100%;
+height: 0.01rem;
+background-color: #c4c4c4;
+position: absolute;
+bottom: 1rem;
+left: 0;
 }
 
 .content-close {
-    font-size: 0.36rem;
-    color: #4474BB;
-    text-align: center;
-    margin-top: 0.7rem;
+font-size: 0.36rem;
+color: #4474BB;
+text-align: center;
+margin-top: 0.7rem;
 }

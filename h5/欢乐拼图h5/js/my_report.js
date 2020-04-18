@@ -1,3 +1,14 @@
+$('.report_cell img').hide();
+
+$('.report_cell').click(function () {
+    if($(this).children('img').css('display')=='block'){
+        $(this).children('img').hide();
+    }else {
+        $(this).children('img').show();
+    }
+
+})
+
 $('button[type=primary]').click(function (e) {
     e.preventDefault();
     // $.ajax({
